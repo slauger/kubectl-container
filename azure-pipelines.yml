@@ -27,3 +27,10 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+
+schedules:
+- cron: "0 7 * * *"
+  displayName: daily
+  branches:
+    include: [ "master", "main" ]
+  always: boolean
