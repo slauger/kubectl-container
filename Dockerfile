@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi9-minimal:latest
 
-ARG KUBECTL_VERSION=v1.23.4
+ARG KUBECTL_VERSION=v1.35.1
 ARG TARGETARCH
 
 RUN microdnf install -y curl-minimal && \
